@@ -1,5 +1,7 @@
 # middlesite
 
+[![Gem Version](https://badge.fury.io/rb/middlesite.png)](http://badge.fury.io/rb/middlesite)
+
 > Gem containing tasks to build, release and deploy your Middleman site.
 
 ## Installation
