@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["franklin@weareinteractive.com"]
   spec.description   = %q{Gem containing tasks to build, release and deploy your Middleman site.}
   spec.summary       = %q{Tasks to manage Middleman sites.}
-  spec.homepage      = "https://github.com/weareinteractive/gem-middlesite"
+  spec.homepage      = "https://github.com/franklinkim/gem-middlesite"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
