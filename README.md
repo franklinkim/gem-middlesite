@@ -37,4 +37,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 5. Create new Pull Request
 
 ## License
-Copyright (c) 2013 We Are Interactive under the MIT license.
+Copyright (c) 2013 franklin under the MIT license.
