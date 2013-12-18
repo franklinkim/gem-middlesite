@@ -14,6 +14,12 @@ The following tasks are available trough the command line.
 
 ```
 Commands:
+  middlesite build           # Generate build from sources
+  middlesite bump [TYPE]     # Bump version (patch|minor|major), commit, tag, and push.
+  middlesite deploy          # Build and deploy to server
+  middlesite help [COMMAND]  # Describe available commands or one specific command
+  middlesite init            # Initialize the workspace.
+  middlesite server          # Build and start server
 ```
 
 ## Development
