@@ -7,8 +7,25 @@
 ```
 $ gem install middlesite
 ```
-
 ## Usage
+
+This tool requires a `site.yml` file in the `data` directory:
+
+```
+.
+├── Gemfile
+├── README.md
+├── config.rb
+├── data
+│   └── site.yml
+└── source
+```
+The `site.yml` file should contain the variable `version` which can be used in your templates as well:
+
+```
+---
+version: 0.1.0
+```
 
 The following tasks are available trough the command line.
 

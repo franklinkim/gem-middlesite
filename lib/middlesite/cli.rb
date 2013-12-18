@@ -40,24 +40,25 @@ module Middlesite
       raise Thor::Error, "Not a git repository!" unless Dir.exists?(".git")
       g = ::Git.open(".")
       raise Thor::Error, "Uncommitted git changes!" unless g.status.changed.empty?
-      tags = g.tags
-      raise Thor::Error, "No tag found!" if tags.empty?
-      tag = tags.pop().name
+
+      config = get_config()
+      version = config["version"]
 
       # Bump version
       case type
       when "major"
-        version = bump_major(tag)
+        version = bump_major(version)
       when "minor"
-        version = bump_minor(tag)
+        version = bump_minor(version)
       when "patch"
-        version = bump_patch(tag)
+        version = bump_patch(version)
+      else
+        raise Thor::Error, "Unknown bump type!"
       end
       puts "Bumping version to: #{version}"
 
       # update config
       puts "Updating site config..."
-      config = get_config()
       config["version"] = version
       set_config(config)
 
