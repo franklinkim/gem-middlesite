@@ -41,6 +41,11 @@ module Middlesite
       g = ::Git.open(".")
       raise Thor::Error, "Uncommitted git changes!" unless g.status.changed.empty?
 
+      # checking for remote changes
+      puts "Updating remote..."
+      system "git remote update"
+      raise Thor::Error, "Unmerged remote commits! Run: `git pull`!" unless g.gtree("HEAD..origin/master").log.first.nil?
+
       config = get_config()
       version = config["version"]
 
